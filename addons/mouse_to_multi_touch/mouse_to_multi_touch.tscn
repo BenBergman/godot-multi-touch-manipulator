@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://deajsf8cobjtv"]
+
+[ext_resource type="Script" uid="uid://twrh66xbbcgr" path="res://addons/mouse_to_multi_touch/mouse_to_multi_touch.gd" id="1_ct3q7"]
+
+[node name="MouseToMultiTouch" type="Node2D" unique_id=187265286]
+z_index = 999
+script = ExtResource("1_ct3q7")

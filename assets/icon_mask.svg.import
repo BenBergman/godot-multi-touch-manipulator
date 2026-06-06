@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://i7a2puag541c"
+path="res://.godot/imported/icon_mask.svg-78bf53c1e678963681bce1e6cc7a5e6f.res"
+
+[deps]
+
+source_file="res://assets/icon_mask.svg"
+dest_files=["res://.godot/imported/icon_mask.svg-78bf53c1e678963681bce1e6cc7a5e6f.res"]
+
+[params]
+
+create_from=1
+threshold=0.5

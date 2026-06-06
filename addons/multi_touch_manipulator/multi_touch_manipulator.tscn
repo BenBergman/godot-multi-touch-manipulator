@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b6vrtjxpq06qr"]
+
+[ext_resource type="Script" uid="uid://cuvkbkb88ymn1" path="res://addons/multi_touch_manipulator/multi_touch_manipulator.gd" id="1_70pkj"]
+[ext_resource type="Texture2D" uid="uid://dhkmiic6pr2j1" path="res://assets/icon.svg" id="2_oa58y"]
+[ext_resource type="BitMap" uid="uid://i7a2puag541c" path="res://assets/icon_mask.svg" id="3_oa58y"]
+
+[node name="MultiTouchManipulator" type="Node2D" unique_id=1885897647]
+script = ExtResource("1_70pkj")
+
+[node name="Container" type="Node2D" parent="." unique_id=1849058031]
+show_behind_parent = true
+
+[node name="TextureButton" type="TextureButton" parent="Container" unique_id=1836805971]
+show_behind_parent = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_oa58y")
+texture_click_mask = ExtResource("3_oa58y")
+metadata/_edit_use_anchors_ = true

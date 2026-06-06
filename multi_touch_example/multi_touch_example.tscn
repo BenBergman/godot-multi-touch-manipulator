@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://0gfqg8fvxwdp"]
+
+[ext_resource type="PackedScene" uid="uid://b6vrtjxpq06qr" path="res://addons/multi_touch_manipulator/multi_touch_manipulator.tscn" id="1_bma0n"]
+[ext_resource type="Script" uid="uid://ct8mq21fhlmrn" path="res://multi_touch_example/multi_touch_example.gd" id="1_fyihk"]
+[ext_resource type="Texture2D" uid="uid://beaakpn3sk1u1" path="res://assets/three_quarter_circle.png" id="2_fyihk"]
+[ext_resource type="BitMap" uid="uid://cseu1a8ccdg4r" path="res://assets/three_quarter_circle_mask.png" id="3_acnt6"]
+[ext_resource type="Texture2D" uid="uid://d3iiscelfndey" path="res://assets/peter-thomas-o3K6o34EnPo-unsplash.jpg" id="4_ar4o5"]
+[ext_resource type="Texture2D" uid="uid://35jigks26to3" path="res://assets/icon_larger.svg" id="5_ggqjm"]
+[ext_resource type="PackedScene" uid="uid://deajsf8cobjtv" path="res://addons/mouse_to_multi_touch/mouse_to_multi_touch.tscn" id="6_pr0be"]
+
+[node name="MultiTouchSpace" type="Node2D" unique_id=339754028]
+script = ExtResource("1_fyihk")
+
+[node name="HighResPhoto" parent="." unique_id=1606015456 instance=ExtResource("1_bma0n")]
+position = Vector2(727, 466)
+rotation = 0.5532694
+texture = ExtResource("4_ar4o5")
+bounding_rect = Vector2(800, 800)
+debug_draw_flags = 5
+
+[node name="AlphaMaskPassThrough" parent="." unique_id=1885897647 instance=ExtResource("1_bma0n")]
+position = Vector2(284, 322)
+texture = ExtResource("2_fyihk")
+click_mask = ExtResource("3_acnt6")
+
+[node name="TouchableGroup" type="Node2D" parent="." unique_id=114876826]
+position = Vector2(1316, 607)
+
+[node name="DrawTouchMotions" parent="TouchableGroup" unique_id=748436812 instance=ExtResource("1_bma0n")]
+position = Vector2(150, 0)
+rotation = 0.58294
+debug_draw_flags = 2
+
+[node name="DrawObjectTransform" parent="TouchableGroup" unique_id=457534913 instance=ExtResource("1_bma0n")]
+position = Vector2(0, -44)
+texture = ExtResource("5_ggqjm")
+debug_draw_flags = 8
+
+[node name="DrawTouchPoints" parent="TouchableGroup" unique_id=1893556393 instance=ExtResource("1_bma0n")]
+position = Vector2(-150, 0)
+rotation = -0.58294
+debug_draw_flags = 1
+
+[node name="MouseToMultiTouch" parent="." unique_id=187265286 instance=ExtResource("6_pr0be")]
