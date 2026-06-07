@@ -102,14 +102,11 @@ func _draw() -> void:
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:
-		# TODO: validate the pixel we are touching is not fully transparent before storing and accepting it
-		# - Not sure if a control node can do this - if not, I might need to go back to the raw input handling from commit a39e23a
 		if event.is_pressed():
 			move_to_front()
 			if event.double_tap:
 				go_home()
 			touches[event.index] = Touch.new(event.position - control.size / 2.0, item.transform)
-			# TODO: fix overlapping sprites
 		else:
 			touches.erase(event.index)
 
